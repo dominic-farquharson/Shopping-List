@@ -2,8 +2,8 @@
 
 var AllItems = React.createClass({
   // delete button
-  handleDelete() {
-    this.props.handleDelete();
+  handleDelete(id) {
+    this.props.handleDelete(id);
   },
 
   render(){

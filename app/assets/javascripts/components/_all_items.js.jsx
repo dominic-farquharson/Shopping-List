@@ -1,19 +1,22 @@
 // All Items view
 
-const AllItems = React.createClass({
-  // gettig inital state
-  getInitalState() {
-    return { items: [] }
-  }
+var AllItems = React.createClass({
 
-  componentDidMount() {
-    console.log('component mounted');
-  }
 
   render(){
+    // iterating through items array
+    var items = this.props.items.map((item)=>{
+      return(
+        <div key={item.id}>
+          <h3>{item.name}</h3>
+          <p>{item.description}</p>
+          <p>{item.quantity}</p>
+        </div>
+      )
+    })
     return(
       <div>
-        <h1>All items</h1>
+        {items}
       </div>
     )
   }

@@ -6,7 +6,9 @@ var Main = React.createClass({
       <div>
         {/* Rendering header component */}
         <Header />
+        {/* rendering body component */}
+        <Body />
       </div>
     )
   }
-})
+});

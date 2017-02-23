@@ -1,5 +1,5 @@
 # responsible for rendergin static view
-class siteController < ApplicationController
+class SiteController < ApplicationController
   def index
   end
-end  
+end

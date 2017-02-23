@@ -7,7 +7,6 @@ end
 
 # react - rails
 gem 'react-rails'
-
 # responders gem
 gem 'responders'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

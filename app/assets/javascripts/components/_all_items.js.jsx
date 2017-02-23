@@ -1,7 +1,10 @@
 // All Items view
 
 var AllItems = React.createClass({
-
+  // delete button
+  handleDelete() {
+    this.props.handleDelete();
+  },
 
   render(){
     // iterating through items array
@@ -11,6 +14,7 @@ var AllItems = React.createClass({
           <h3>{item.name}</h3>
           <p>{item.description}</p>
           <p>{item.quantity}</p>
+          <button onClick={this.handleDelete.bind(this, item.id)}>Delete</button>
         </div>
       )
     })

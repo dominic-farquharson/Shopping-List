@@ -1,5 +1,5 @@
 var NewItem = React.createClass({
-  // handling clicks 
+  // handling clicks
   handleClick() {
     var name = this.refs.name.value;
     var description = this.refs.description.value;

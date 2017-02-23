@@ -17,13 +17,18 @@ var Body = React.createClass({
     var newState = this.state.items.concat(item);
     this.setState({ items: newState })
   },
+
+  // Deleting item
+  handleDelete() {
+    console.log('in handle delete')
+  },
   render() {
     return (
       <div>
         {/* rendering new item */}
         <NewItem handleSubmit={this.handleSubmit} />
         {/*rendering all items  */}
-        <AllItems items={this.state.items} />
+        <AllItems items={this.state.items} handleDelete={this.handleDelete} />
       </div>
     )
   }

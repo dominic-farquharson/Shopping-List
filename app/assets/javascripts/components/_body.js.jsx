@@ -20,14 +20,21 @@ var Body = React.createClass({
 
   // Deleting item
   handleDelete(id) {
-    console.log(id)
     $.ajax({
       url: `/api/v1/items/${id}`,
       type: 'DELETE',
-      success(response) {
-        console.log('successfully removed item')
+      success: ()=> {
+        this.removeItemClient(id);
       }
     });
+  },
+
+  // updating state after removing item
+  removeItemClient(id) {
+    var newItems = this.state.items.filter( (item) => {
+      return item.id != id;
+    })
+    this.setState({ items: newItems });
   },
   render() {
     return (

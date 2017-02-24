@@ -18,8 +18,8 @@ class Api::V1::ItemsController < Api::V1::BaseController
   # update Action, finds by Id
   def update
     item = Item.find(params["id"])
-    item.update.attributes(item_params)
-    respond_with item json: item
+    item.update_attributes(items_params)
+    respond_with item, json: item
   end
 
   # private

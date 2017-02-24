@@ -5,16 +5,18 @@ var AllItems = React.createClass({
   handleDelete(id) {
     this.props.handleDelete(id);
   },
-
+  onUpdate(item) {
+    console.log('on update - all items')
+    this.props.onUpdate(item);
+  },
   render(){
     // iterating through items array
     var items = this.props.items.map((item)=>{
       return(
         <div key={item.id}>
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <p>{item.quantity}</p>
-          <button onClick={this.handleDelete.bind(this, item.id)}>Delete</button>
+          <Item item={item}
+            handleDelete={this.handleDelete.bind(this, item.id)}
+            handleUpdate = {this.onUpdate} />
         </div>
       )
     })
